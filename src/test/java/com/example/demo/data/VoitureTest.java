@@ -8,14 +8,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
 public class VoitureTest {
+    Private Voiture voiture1;
+    Private Voiture voiture2;
 
 
 
     @Test
     void creerVoiture(){
-        Voiture voiture1 = new Voiture("Volkwagen", 2000);
+        voiture1 = new Voiture("Volkwagen", 2000);
         voiture.setId(1);
-        Voiture voiture2 = new Voiture("Ferrari", 2500);
+        voiture2 = new Voiture("Ferrari", 2500);
         voiture2.setId(2);
     }
 

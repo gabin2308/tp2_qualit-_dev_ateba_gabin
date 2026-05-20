@@ -12,13 +12,6 @@ import static org.mockito.Mockito.*;
 public class StatistiqueTests {
 
     @MockBean
-    StatistiqueImpl service = new statistiqueImpl();
-    service.ajouter(new Voiture("Renault", 1000));
-    service.ajouter(new Voiture("Peugeot", 2000));
-
-    Echantillon echantillon = service.prixMoyen();
-
-
-    assertEquals(2, echantillon.getNombreDeVoitures());
-
+    StatistiqueImpl  statistiqueImpl;
+  
 }

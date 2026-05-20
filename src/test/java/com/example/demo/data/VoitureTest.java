@@ -9,11 +9,20 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @SpringBootTest
 public class VoitureTest {
 
-    private final Voiture voiture = new Voiture("gabin", 2000);
+
+
+    @Test
+    void creerVoiture(){
+        Voiture voiture1 = new Voiture("Volkwagen", 2000);
+        voiture.setId() == 1
+        Voiture voiture2 = new Voiture("Ferrari", 2500);
+        voiture2.setId() == 2
+    }
 
     @Test
     void VerifierMarque(){
-        assertEquals("hi",voiture.getMarque() );
+        Assert.isTrue(voiture1.getPrix() == 2000, " Doit etre 3800");
+        
     }
 
 }

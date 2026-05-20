@@ -13,7 +13,7 @@ public class VoitureTest {
 
     @Test
     void VerifierMarque(){
-        assertEquals("gabin",voiture.getMarque() );
+        assertEquals("hi",voiture.getMarque() );
     }
 
 }

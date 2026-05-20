@@ -8,8 +8,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
 public class VoitureTest {
-    Private Voiture voiture1;
-    Private Voiture voiture2;
+    private Voiture voiture1;
+    private Voiture voiture2;
 
 
 

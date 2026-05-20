@@ -16,7 +16,7 @@ public class VoitureTest {
     @Test
     void creerVoiture(){
         voiture1 = new Voiture("Volkwagen", 2000);
-        voiture.setId(1);
+        voiture1.setId(1);
         voiture2 = new Voiture("Ferrari", 2500);
         voiture2.setId(2);
     }

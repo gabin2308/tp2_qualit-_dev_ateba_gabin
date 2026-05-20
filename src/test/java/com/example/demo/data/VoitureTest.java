@@ -14,9 +14,9 @@ public class VoitureTest {
     @Test
     void creerVoiture(){
         Voiture voiture1 = new Voiture("Volkwagen", 2000);
-        voiture.setId() == 1
+        voiture.setId()== 1;
         Voiture voiture2 = new Voiture("Ferrari", 2500);
-        voiture2.setId() == 2
+        voiture2.setId()== 2;
     }
 
     @Test

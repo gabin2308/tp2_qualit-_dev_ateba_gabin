@@ -12,6 +12,6 @@ import static org.mockito.Mockito.*;
 public class StatistiqueTests {
 
     @MockBean
-    StatistiqueImpl statistiqueImpl;
-
+    StatistiqueImpl  statistiqueImpl;
+  
 }

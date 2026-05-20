@@ -1,6 +1,6 @@
 public class bonjour {
     
-    public void static main(String[] args){
+    public static void main(String[] args){
         System.out.print("Bonjour l'ami");
     }
 }

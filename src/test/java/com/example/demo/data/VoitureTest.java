@@ -13,7 +13,7 @@ public class VoitureTest {
 
 
 
-    @Test
+    @BeforeEach
     void creerVoiture(){
         voiture1 = new Voiture("Volkwagen", 2000);
         voiture1.setId(1);

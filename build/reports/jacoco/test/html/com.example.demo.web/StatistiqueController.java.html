@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
     @GetMapping(value = &quot;/statistique&quot;)
     public Echantillon getStatistiques() throws PasDeVoitureException {
         try{
-<span class="nc" id="L18">            return statistique.prixMoyen();</span>
+<span class="fc" id="L18">            return statistique.prixMoyen();</span>
 <span class="nc" id="L19">        } catch (ArithmeticException e) {</span>
 <span class="nc" id="L20">            throw new PasDeVoitureException();</span>
         }
@@ -24,8 +24,8 @@ import org.springframework.web.bind.annotation.*;
 
     @PostMapping(&quot;/voiture&quot;)
     public void creerVoiture(@RequestBody Voiture voiture){
-<span class="nc" id="L27">        statistique.ajouter(voiture);</span>
-<span class="nc" id="L28">    }</span>
+<span class="fc" id="L27">        statistique.ajouter(voiture);</span>
+<span class="fc" id="L28">    }</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

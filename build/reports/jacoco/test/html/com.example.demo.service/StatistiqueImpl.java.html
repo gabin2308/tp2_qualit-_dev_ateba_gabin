@@ -14,19 +14,19 @@ import java.util.List;
 
     @Override
     public void ajouter(Voiture voiture) {
-<span class="nc" id="L17">        voitures.add(voiture);</span>
-<span class="nc" id="L18">    }</span>
+<span class="fc" id="L17">        voitures.add(voiture);</span>
+<span class="fc" id="L18">    }</span>
 
     @Override
     public Echantillon prixMoyen() throws ArithmeticException {
-<span class="nc" id="L22">        int prixTotal = 0;</span>
-<span class="nc" id="L23">        int nombreDeVoitures = 0;</span>
-<span class="nc" id="L24">        Iterator&lt;Voiture&gt; iterator = voitures.iterator();</span>
-<span class="nc bnc" id="L25" title="All 2 branches missed.">        while(iterator.hasNext()){</span>
-<span class="nc" id="L26">            prixTotal = prixTotal + iterator.next().getPrix();</span>
-<span class="nc" id="L27">            nombreDeVoitures++;</span>
+<span class="fc" id="L22">        int prixTotal = 0;</span>
+<span class="fc" id="L23">        int nombreDeVoitures = 0;</span>
+<span class="fc" id="L24">        Iterator&lt;Voiture&gt; iterator = voitures.iterator();</span>
+<span class="fc bfc" id="L25" title="All 2 branches covered.">        while(iterator.hasNext()){</span>
+<span class="fc" id="L26">            prixTotal = prixTotal + iterator.next().getPrix();</span>
+<span class="fc" id="L27">            nombreDeVoitures++;</span>
         }
-<span class="nc" id="L29">        return new Echantillon(nombreDeVoitures, prixTotal/nombreDeVoitures);</span>
+<span class="fc" id="L29">        return new Echantillon(nombreDeVoitures, prixTotal/nombreDeVoitures);</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

@@ -24,10 +24,14 @@ public class VoitureTest {
     @Test
     void VerifierMarque(){
         assertEquals("Volkwagen", voiture1.getMarque(), "La marque doit etre Volkwagen");
+        assertEquals("Ferrari", voiture2.getMarque(), "La marque doit etre Ferrari");
     }
     @Test
     void VerifierPrix(){
         assertEquals(2000, voiture1.getPrix(), "Doit etre 2000");
+        assertEquals(2500, voiture2.getPrix(), "Doit etre 2500");
     }
+
+
 
 }

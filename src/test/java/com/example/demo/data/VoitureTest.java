@@ -23,10 +23,11 @@ public class VoitureTest {
 
     @Test
     void VerifierMarque(){
-        Assert.isTrue(voiture2.getMarque().equals("Ferrari"), "Doit etre Ferrari");
+        assertEquals("Volkwagen", voiture1.getMarque(), "La marque doit etre Volkwagen");
     }
     @Test
     void VerifierPrix(){
-        Assert.isTrue(voiture1.getPrix() == 2000, "Doit etre 2000");    }
+        assertEquals(2000, voiture1.getPrix(), "Doit etre 2000");
+    }
 
 }

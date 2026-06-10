@@ -7,11 +7,13 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 
 import static org.mockito.Mockito.*;
 
-//gabin
+
 @SpringBootTest
 public class StatistiqueTests {
 
     @MockBean
-    StatistiqueImpl statistiqueImpl;
+
+    StatistiqueImpl  statistiqueImpl;
+  
 
 }

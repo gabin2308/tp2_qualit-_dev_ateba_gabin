@@ -27,4 +27,28 @@ class WebTests {
     @Autowired
     MockMvc mockMvc;
 
+    @Test
+    void testGetStatistique() throws Exception{
+        Echantillon echantillon = new Echantillon(3, 15000);
+        when(statistiqueImpl.prixMoyen()).thenReturn(echantillon);
+   
+
+        mockMvc.perform(get("/statistique")
+                .contentType(MediaType.APPLICATION_JSON))
+                .andDo(print())
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.nombreDeVoitures").value(3))
+                .andExpect(jsonPath("$.prixMoyen").value(15000));
+    }
+
+    @Test
+    void testAjouterVoiture() throws Exception {
+        Voiture voiture = new Voiture("Toyota", 10000);
+
+        mockMvc.perform(post("/voiture")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content("{\"marque\":\"Toyota\",\"prix\":10000}"))
+                .andDo(print())
+                .andExpect(status().isOk());
+}
 }

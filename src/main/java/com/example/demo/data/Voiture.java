@@ -7,7 +7,7 @@ public class Voiture {
     int id;
 
     public Voiture(){
-    }
+     }
 
     public Voiture(String marque, int prix) {
         this.marque = marque;

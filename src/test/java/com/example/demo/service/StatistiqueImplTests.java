@@ -1,5 +1,7 @@
 package com.example.demo.service;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 import org.junit.jupiter.api.Test;
 import com.example.demo.data.Voiture;
 
@@ -24,4 +26,13 @@ public class StatistiqueImplTests {
 
     }
 
+    @Test
+    void voitureVide() {
+        StatistiqueImpl statistique = new StatistiqueImpl();
+        Exception exception = assertThrows(ArithmeticException.class, () -> {
+            statistique.prixMoyen();
+        });
+    
+        assertEquals("/ by zero", exception.getMessage()); 
+    }
 }

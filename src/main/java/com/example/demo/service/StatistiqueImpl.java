@@ -26,6 +26,9 @@ public class StatistiqueImpl implements Statistique{
             prixTotal = prixTotal + iterator.next().getPrix();
             nombreDeVoitures++;
         }
+        // if (nombreDeVoitures == 0) {
+        //     throw new ArithmeticException("/ by zero");
+        // }
         return new Echantillon(nombreDeVoitures, prixTotal/nombreDeVoitures);
     }
 }

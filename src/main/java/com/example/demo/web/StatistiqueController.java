@@ -4,10 +4,18 @@ import com.example.demo.data.Voiture;
 import com.example.demo.service.Echantillon;
 import com.example.demo.service.Statistique;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class StatistiqueController {
+
+    @ExceptionHandler(PasDeVoitureException.class)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    @ResponseBody
+    public String handlePasDeVoiture(PasDeVoitureException e) {
+        return "La liste des voitures est vide";
+    }
 
     @Autowired
     Statistique statistique;

@@ -50,5 +50,15 @@ class WebTests {
                 .content("{\"marque\":\"Toyota\",\"prix\":10000}"))
                 .andDo(print())
                 .andExpect(status().isOk());
-}
+    }
+
+    @Test
+    void testGetStatistiqueSansVoiture() throws Exception {
+        when(statistiqueImpl.prixMoyen()).thenThrow(new ArithmeticException("/ by zero"));
+        mockMvc.perform(get("/statistique")
+                .contentType(MediaType.APPLICATION_JSON))
+                .andDo(print())
+                .andExpect(status().isInternalServerError())
+                .andExpect(content().string("La liste des voitures est vide"));
+    }
 }
